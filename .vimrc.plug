@@ -1,0 +1,42 @@
+" Some plugins are courtesy of https://vim.fisadev.com/
+call plug#begin('~/.vim/plugged')
+
+" Vim Themes
+Plug 'morhetz/gruvbox'
+
+" Python autocompletion
+Plug 'deoplete-plugins/deoplete-jedi'
+
+" Automatically close parenthesis, etc
+Plug 'Townk/vim-autoclose'
+
+" Automatically sort python imports
+Plug 'fisadev/vim-isort'
+
+" Vim testing framework for Vim scripts
+Plug 'junegunn/vader.vim'
+
+if has('nvim')
+  Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+else
+  Plug 'Shougo/deoplete.nvim'
+  Plug 'roxma/nvim-yarp'
+  Plug 'roxma/vim-hug-neovim-rpc'
+endif
+
+" Vim Status bar themes
+"Plug 'vim-airline/vim-airline'
+"Plug 'vim-airline/vim-airline-themes'
+
+Plug 'myusuf3/numbers.vim'
+Plug 'sheerun/vim-polyglot'
+Plug 'tpope/vim-surround'
+Plug 'tpope/vim-repeat'
+Plug 'davidhalter/jedi-vim'
+"Plug 'tpope/vim-fugitive'
+Plug 'preservim/nerdtree'
+Plug 'dense-analysis/ale'
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+Plug 'junegunn/fzf.vim'
+
+call plug#end()

@@ -245,9 +245,6 @@ alias ll='ls -l'
 alias la='ls -A'
 alias l='ls -CF'
 
-alias list='ls -lhtr'
-
-
 
 # enable auto-suggestions based on the history
 #if [ -f /usr/share/zsh-autosuggestions/zsh-autosuggestions.zsh ]; then
@@ -263,9 +260,9 @@ fi
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
+
 # Set up fzf key bindings and fuzzy completion
 source <(fzf --zsh)
-
 
 # git aliases
 alias gs='git status'
@@ -273,8 +270,8 @@ alias ga='git add'
 alias gc='git commit -m '
 alias gp='git push -u origin'
 
-
 # Open files with Vim using fzf
 alias fvim='vim $(fzf --preview="batcat --color=always {}")'
 
-
+# Custom alias for 'ls'
+alias list='ls -lhtr'
